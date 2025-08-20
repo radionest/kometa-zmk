@@ -57,6 +57,16 @@
             mods = <(MOD_LSFT)>;
             keep-mods = <(MOD_LSFT)>;
         };
+
+        ALT_if_CTRL_else_TAB: ALT_if_CTRL_else_TAB {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALT_IF_CTRL_ELSE_TAB";
+            bindings = <&kp TAB>, <&kp LEFT_ALT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LCTL|MOD_RCTL)>;
+            keep-mods = <(MOD_LCTL|MOD_RCTL)>;
+        };
     };
 
     macros {
@@ -73,10 +83,10 @@
 
         RU {
             bindings = <
-&kp TAB        &lt 5 Q  &kp W           &kp E        &kp R            &kp T                    &kp Y      &kp U            &kp I        &kp O            &kp P     &kp RIGHT_BRACKET
-&ESC_or_TILDA  &lt 2 A  &hr S LEFT_ALT  &hr D LCTRL  &hr F LEFT_GUI   &kp G                    &kp H      &hr J RIGHT_WIN  &hr K RCTRL  &hr L RIGHT_ALT  &kp SEMI  &kp SQT
-&kp LEFT_ALT   &lt 5 Z  &kp X           &copy        &paste           &kp B                    &kp N      &kp M            &kp COMMA    &kp DOT          &kp FSLH  &kp RG(SPACE)
-                                        &sk LSHFT    &mt LCTRL ENTER  &SYM_or_tap 0 BACKSPACE  &lt 7 ESC  &mt RSHFT BSPC   &lt 8 DEL
+&ALT_if_CTRL_else_TAB  &lt 5 Q  &kp W           &kp E        &kp R            &kp T                    &kp Y      &kp U            &kp I        &kp O            &kp P     &kp RIGHT_BRACKET
+&ESC_or_TILDA          &lt 2 A  &hr S LEFT_ALT  &hr D LCTRL  &hr F LEFT_GUI   &kp G                    &kp H      &hr J RIGHT_WIN  &hr K RCTRL  &hr L RIGHT_ALT  &kp SEMI  &kp SQT
+&kp LEFT_GUI           &lt 5 Z  &kp X           &copy        &paste           &kp B                    &kp N      &kp M            &kp COMMA    &kp DOT          &kp FSLH  &kp RG(SPACE)
+                                                &sk LSHFT    &mt LCTRL ENTER  &SYM_or_tap 0 BACKSPACE  &lt 7 ESC  &mt RSHFT BSPC   &lt 8 DEL
             >;
         };
 
