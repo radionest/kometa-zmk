@@ -108,6 +108,20 @@
             bindings = <&none>;
             label = "CHANGE_LANG_AND_GOTO_SYM";
         };
+
+        lang_eng: lang_eng {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LEFT_SHIFT) &to 1>;
+            label = "LANG_ENG";
+        };
+
+        lang_ru: lang_ru {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LA(LEFT_SHIFT) &to 0>;
+            label = "LANG_RU";
+        };
     };
 
     keymap {
@@ -151,10 +165,10 @@
 
         SYM {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
+&kp PIPE       &kp TILDE        &kp LEFT  &kp LALT   &kp        &kp       &kp  &kp  &kp  &kp  &kp  &kp
+&kp GRAVE      &kp EXCLAMATION  &kp AT    &kp        &kp        &kp       &kp  &kp  &kp  &kp  &kp  &kp
+&kp BACKSLASH  &kp KP_SLASH     &kp STAR  &kp MINUS  &kp EQUAL  &kp PLUS  &kp  &kp  &kp  &kp  &kp  &kp
+                                          &kp        &kp        &kp       &kp  &kp  &kp
             >;
         };
 
