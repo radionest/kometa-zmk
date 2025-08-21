@@ -115,10 +115,10 @@
 
         RU {
             bindings = <
-&ALT_if_CTRL_else_TAB  &lt 5 Q  &kp W  &kp E            &ALTTAB_or_R        &kp T                    &kp Y          &kp U        &kp I         &kp O    &kp P     &kp RIGHT_BRACKET
-&ESC_or_TILDA          &lt 2 A  &kp S  &ALT LEFT_ALT D  &kp F               &kp G                    &kp H          &kp J        &kp K         &kp L    &kp SEMI  &kp SQT
-&kp LEFT_GUI           &lt 5 Z  &kp X  &kp C            &SHIFT_ALTTAB_or_V  &kp B                    &kp N          &kp M        &kp COMMA     &kp DOT  &kp FSLH  &kp RG(SPACE)
-                                       &sk LSHFT        &mt LCTRL ENTER     &SYM_or_tap 0 BACKSPACE  &kp RIGHT_ALT  &lt 3 SPACE  &mt RALT DEL
+&ALT_if_CTRL_else_TAB  &lt 5 Q  &kp W  &kp E            &ALTTAB_or_R        &kp T                    &kp Y          &kp U        &kp I                  &kp O    &kp P     &kp RIGHT_BRACKET
+&ESC_or_TILDA          &lt 2 A  &kp S  &ALT LEFT_ALT D  &kp F               &kp G                    &kp H          &kp J        &kp K                  &kp L    &kp SEMI  &kp SQT
+&kp LEFT_GUI           &lt 5 Z  &kp X  &kp C            &SHIFT_ALTTAB_or_V  &kp B                    &kp N          &kp M        &kp COMMA              &kp DOT  &kp FSLH  &kp RG(SPACE)
+                                       &sk LSHFT        &mt LCTRL ENTER     &SYM_or_tap 0 BACKSPACE  &kp RIGHT_ALT  &lt 3 SPACE  &mt LS(RIGHT_GUI) DEL
             >;
         };
 
@@ -133,10 +133,10 @@
 
         NUM {
             bindings = <
-&trans  &trans  &kp KP_NUMBER_7  &kp KP_N8  &kp KP_N9  &trans           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans           &trans     &trans     &kp KP_NUMBER_0  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans           &trans     &trans     &kp KP_NUMLOCK   &trans  &trans  &trans  &trans  &trans  &trans
-                                 &trans     &trans     &trans           &trans  &trans  &trans
+&trans  &trans  &kp KP_NUMBER_7  &kp KP_N8        &kp KP_N9     &trans           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp NUMBER_6  &kp KP_NUMBER_0  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans           &trans           &trans        &kp KP_NUMLOCK   &trans  &trans  &trans  &trans  &trans  &trans
+                                 &trans           &trans        &trans           &trans  &trans  &trans
             >;
         };
 
