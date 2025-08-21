@@ -67,6 +67,38 @@
             mods = <(MOD_LCTL|MOD_RCTL)>;
             keep-mods = <(MOD_LCTL|MOD_RCTL)>;
         };
+
+        ALT: ALT {
+            compatible = "zmk,behavior-hold-tap";
+            label = "ALT";
+            bindings = <&mt>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <150>;
+            flavor = "tap-preferred";
+            retro-tap;
+            hold-trigger-key-positions = <4 28 5 34>;
+        };
+
+        ALTTAB_or_R: ALTTAB_or_R {
+            compatible = "zmk,behavior-mod-morph";
+            label = "ALTTAB_OR_R";
+            bindings = <&kp R>, <&kp TAB>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LALT)>;
+        };
+
+        SHIFT_ALTTAB_or_V: SHIFT_ALTTAB_or_V {
+            compatible = "zmk,behavior-mod-morph";
+            label = "SHIFT_ALTTAB_OR_V";
+            bindings = <&kp V>, <&kp LS(TAB)>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LALT)>;
+            keep-mods = <(MOD_LALT)>;
+        };
     };
 
     macros {
@@ -83,10 +115,10 @@
 
         RU {
             bindings = <
-&ALT_if_CTRL_else_TAB  &lt 5 Q  &kp W           &kp E        &kp R            &kp T                    &kp Y      &kp U            &kp I        &kp O            &kp P     &kp RIGHT_BRACKET
-&ESC_or_TILDA          &lt 2 A  &hr S LEFT_ALT  &hr D LCTRL  &hr F LEFT_GUI   &kp G                    &kp H      &hr J RIGHT_WIN  &hr K RCTRL  &hr L RIGHT_ALT  &kp SEMI  &kp SQT
-&kp LEFT_GUI           &lt 5 Z  &kp X           &copy        &paste           &kp B                    &kp N      &kp M            &kp COMMA    &kp DOT          &kp FSLH  &kp RG(SPACE)
-                                                &sk LSHFT    &mt LCTRL ENTER  &SYM_or_tap 0 BACKSPACE  &lt 7 ESC  &mt RSHFT BSPC   &lt 8 DEL
+&ALT_if_CTRL_else_TAB  &lt 5 Q  &kp W  &kp E            &ALTTAB_or_R        &kp T                    &kp Y      &kp U            &kp I        &kp O            &kp P     &kp RIGHT_BRACKET
+&ESC_or_TILDA          &lt 2 A  &kp S  &ALT LEFT_ALT D  &kp F               &kp G                    &kp H      &hr J RIGHT_WIN  &hr K RCTRL  &hr L RIGHT_ALT  &kp SEMI  &kp SQT
+&kp LEFT_GUI           &lt 5 Z  &kp X  &kp C            &SHIFT_ALTTAB_or_V  &kp B                    &kp N      &kp M            &kp COMMA    &kp DOT          &kp FSLH  &kp RG(SPACE)
+                                       &sk LSHFT        &mt LCTRL ENTER     &SYM_or_tap 0 BACKSPACE  &lt 7 ESC  &lt 3 BSPC       &lt 8 DEL
             >;
         };
 
@@ -101,19 +133,19 @@
 
         NUM {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp END  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                         &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
         NAV {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &trans  &trans  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &trans
+&trans  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &trans  &trans  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &trans
+&trans  &trans    &trans     &trans     &trans     &trans  &trans  &kp BSPC  &kp RIGHT  &kp RIGHT  &kp DEL    &trans
+                             &trans     &trans     &trans  &trans  &trans    &trans
             >;
         };
 
@@ -128,10 +160,10 @@
 
         F_KEY {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp F1  &kp F2   &kp F3   &kp F4   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp F5  &kp F6   &kp F7   &kp F8   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp F9  &kp F10  &kp F11  &kp F12  &trans  &trans  &trans  &trans  &trans  &trans
+                        &trans   &trans   &trans   &trans  &trans  &trans
             >;
         };
 
