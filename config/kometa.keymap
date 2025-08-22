@@ -191,10 +191,10 @@
 
         SYM {
             bindings = <
-&kp PIPE       &kp TILDE        &kp LEFT  &kp LALT   &kp        &kp       &kp  &kp  &kp  &kp  &kp  &kp
-&kp GRAVE      &kp EXCLAMATION  &kp AT    &kp        &kp        &kp       &kp  &kp  &kp  &kp  &kp  &kp
-&kp BACKSLASH  &kp KP_SLASH     &kp STAR  &kp MINUS  &kp EQUAL  &kp PLUS  &kp  &kp  &kp  &kp  &kp  &kp
-                                          &kp        &kp        &kp       &kp  &kp  &kp
+&kp PIPE       &kp TILDE        &tog_lang AT_SIGN  &tog_lang HASH  &kp DOLLAR     &tog_lang GRAVE  &kp CARET       &kp QUESTION       &kp AMPERSAND     &kp SQT                &kp DOUBLE_QUOTES     &kp PIPE
+&kp GRAVE      &kp EXCLAMATION  &kp AT             &kp HASH        &kp SEMICOLON  &kp PERCENT      &kp COLON       &kp RIGHT_BRACKET  &kp LEFT_BRACKET  &kp RIGHT_PARENTHESIS  &kp LEFT_PARENTHESIS  &trans
+&kp BACKSLASH  &kp KP_SLASH     &kp STAR           &kp MINUS       &kp EQUAL      &kp PLUS         &kp UNDERSCORE  &kp RIGHT_BRACE    &kp LEFT_BRACE    &kp GREATER_THAN       &kp LESS_THAN         &trans
+                                                   &trans          &trans         &trans           &trans          &trans             &trans
             >;
         };
 
