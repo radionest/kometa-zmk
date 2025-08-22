@@ -184,7 +184,7 @@
             bindings = <
 &trans  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &trans  &trans  &kp HOME  &kp PG_UP  &kp PG_DN  &kp END    &trans
 &trans  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &trans  &trans  &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp RBKT
-&trans  &trans    &trans     &trans     &trans     &trans  &trans  &kp BSPC  &kp RIGHT  &kp RIGHT  &kp DEL    &trans
+&trans  &trans    &trans     &trans     &trans     &trans  &trans  &kp BSPC  &del_home  &del_end   &kp DEL    &trans
                              &trans     &trans     &trans  &trans  &trans    &trans
             >;
         };
