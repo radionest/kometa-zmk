@@ -105,7 +105,17 @@
         change_lang_and_goto_SYM: change_lang_and_goto_SYM {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
+            bindings =
+                <&macro_tap>,
+                <&kp LA(RIGHT_SHIFT)>,
+                <&macro_press>,
+                <&mo 4>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&mo 4>,
+                <&macro_tap>,
+                <&kp LA(LEFT_SHIFT)>;
+
             label = "CHANGE_LANG_AND_GOTO_SYM";
         };
 
