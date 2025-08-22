@@ -155,7 +155,7 @@
 
         RU {
             bindings = <
-&ALT_if_CTRL_else_TAB  &lt 5 Q  &kp W  &kp E            &ALTTAB_or_R        &kp T                    &kp Y                    &kp U        &kp I                &kp O    &kp P     &kp RIGHT_BRACKET
+&ALT_if_CTRL_else_TAB  &lt 5 Q  &kp W  &kp E            &ALTTAB_or_R        &kp T                    &kp Y                    &kp U        &kp I                &kp O    &kp P     &kp LEFT_BRACKET
 &ESC_or_TILDA          &lt 2 A  &kp S  &ALT LEFT_ALT D  &kp F               &kp G                    &kp H                    &kp J        &kp K                &kp L    &kp SEMI  &kp SQT
 &kp LEFT_GUI           &lt 5 Z  &kp X  &kp C            &SHIFT_ALTTAB_or_V  &kp B                    &kp N                    &kp M        &kp COMMA            &kp DOT  &kp FSLH  &lang_eng
                                        &sk LSHFT        &mt LCTRL ENTER     &SYM_or_tap 0 BACKSPACE  &mt RIGHT_ALT LS(SLASH)  &lt 3 SPACE  &mt RIGHT_GUI SLASH
@@ -164,10 +164,10 @@
 
         EN {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &lang_ru
-                        &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans           &trans              &trans  &trans                &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans           &trans              &trans  &trans                &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans           &trans              &trans  &trans                &trans  &trans  &lang_ru
+                        &trans  &trans  &lt 4 BACKSPACE  &mt LEFT_ALT COMMA  &trans  &mt RIGHT_GUI PERIOD
             >;
         };
 
