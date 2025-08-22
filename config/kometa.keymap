@@ -122,6 +122,20 @@
             bindings = <&kp LA(LEFT_SHIFT) &to 0>;
             label = "LANG_RU";
         };
+
+        del_end: del_end {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(END) &kp DEL>;
+            label = "DEL_END";
+        };
+
+        del_home: del_home {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(HOME) &kp DEL>;
+            label = "DEL_HOME";
+        };
     };
 
     keymap {
