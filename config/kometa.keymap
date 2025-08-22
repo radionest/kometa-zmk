@@ -182,11 +182,6 @@
             bindings = <&mo 3>;
             key-positions = <29 37>;
         };
-
-        foo {
-            bindings = <&kp F>;
-            key-positions = <16>;
-        };
     };
 
     keymap {
