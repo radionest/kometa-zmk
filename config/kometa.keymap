@@ -150,6 +150,40 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        goto_ADJ {
+            bindings = <&mo 6>;
+            key-positions = <31 41>;
+        };
+
+        toggle_RU_ENG {
+            bindings = <&tog 0>;
+            key-positions = <33 34>;
+        };
+
+        printscreen {
+            bindings = <&kp LS(LG(S))>;
+            key-positions = <16 4>;
+        };
+
+        collapse {
+            bindings = <&kp LG(A)>;
+            key-positions = <28 16>;
+        };
+
+        ctrl_enter {
+            bindings = <&kp LC(ENTER)>;
+            key-positions = <17 5>;
+        };
+
+        NAV {
+            bindings = <&mo 3>;
+            key-positions = <29 37>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
