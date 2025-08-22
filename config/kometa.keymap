@@ -207,6 +207,15 @@
             >;
         };
 
+        adjust_layer {
+            bindings = <
+&none           &none       &out OUT_TOG  &soft_off     &none  &none        &none           &soft_off     &out OUT_TOG  &bootloader   &none         &bt BT_CLR
+&bt BT_CLR_ALL  &bt BT_CLR  &bt BT_SEL 1  &bt BT_SEL 2  &none  &kp K_POWER  &none           &out OUT_TOG  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &none
+&none           &none       &none         &none         &none  &none        &studio_unlock  &none         &none         &none         &none         &bt BT_CLR_ALL
+                                          &trans        &none  &trans       &trans          &none         &trans
+            >;
+        };
+
         layer_8 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
@@ -221,7 +230,7 @@
 &none  &none      &kp NUMBER_3           &kp NUMBER_2         &kp N1                 &kp ASTERISK   &none   &kp EXCLAMATION       &kp AT_SIGN           &kp HASH               &none  &none
 &none  &kp EQUAL  &hr NUMBER_6 LEFT_ALT  &hr N5 LEFT_CONTROL  &hr NUMBER_4 LEFT_GUI  &kp KP_DIVIDE  &none   &hr DOLLAR RIGHT_GUI  &hr PERCENT RCTRL     &hr CARET RIGHT_ALT    &none  &none
 &none  &kp MINUS  &kp N9                 &kp N8               &kp N7                 &kp N0         &none   &kp AMPERSAND         &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none  &none
-                                         &lt 9 TAB            &trans                 &trans         &trans  &trans                &lt 9 DEL
+                                         &lt 6 TAB            &trans                 &trans         &trans  &trans                &lt 6 DEL
             >;
         };
 
@@ -230,16 +239,7 @@
 &none  &kp F1  &kp F2   &kp F3   &kp F4   &none      &none      &none     &kp C_VOLUME_DOWN     &kp C_VOLUME_UP  &none            &none
 &none  &kp F5  &kp F6   &kp F7   &kp F8   &none      &none      &kp LEFT  &kp DOWN              &kp UP           &kp RIGHT_ARROW  &none
 &none  &kp F9  &kp F10  &kp F11  &kp F12  &none      &none      &none     &kp C_BRIGHTNESS_DEC  &kp C_BRI_UP     &none            &none
-                        &trans   &trans   &lt 9 RET  &lt 9 ESC  &trans    &trans
-            >;
-        };
-
-        adjust_layer {
-            bindings = <
-&none           &none       &out OUT_TOG  &soft_off     &none  &none        &none           &soft_off  &out OUT_TOG  &bootloader   &none         &bootloader
-&bt BT_CLR_ALL  &bt BT_CLR  &bt BT_SEL 1  &bt BT_SEL 2  &none  &kp K_POWER  &kp K_POWER     &none      &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
-&none           &none       &none         &none         &none  &none        &studio_unlock  &none      &none         &none         &none         &none
-                                          &trans        &none  &trans       &trans          &none      &trans
+                        &trans   &trans   &lt 6 RET  &lt 6 ESC  &trans    &trans
             >;
         };
     };
