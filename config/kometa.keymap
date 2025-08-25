@@ -107,6 +107,7 @@
             #binding-cells = <0>;
             bindings =
                 <&macro_wait_time 0>,
+                <&macro_tap_time 0>,
                 <&macro_tap>,
                 <&kp LA(RIGHT_SHIFT)>,
                 <&macro_press>,
@@ -115,8 +116,7 @@
                 <&macro_release>,
                 <&mo 4>,
                 <&macro_tap>,
-                <&kp LA(LEFT_SHIFT)>,
-                <&macro_tap_time 0>;
+                <&kp LA(LEFT_SHIFT)>;
 
             label = "CHANGE_LANG_AND_GOTO_SYM";
         };
