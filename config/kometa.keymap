@@ -106,6 +106,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             bindings =
+                <&macro_wait_time 0>,
                 <&macro_tap>,
                 <&kp LA(RIGHT_SHIFT)>,
                 <&macro_press>,
@@ -114,7 +115,8 @@
                 <&macro_release>,
                 <&mo 4>,
                 <&macro_tap>,
-                <&kp LA(LEFT_SHIFT)>;
+                <&kp LA(LEFT_SHIFT)>,
+                <&macro_tap_time 0>;
 
             label = "CHANGE_LANG_AND_GOTO_SYM";
         };
@@ -244,7 +246,7 @@
             bindings = <
 &kp PIPE       &kp TILDE        &tog_lang AT_SIGN  &tog_lang HASH  &kp DOLLAR     &tog_lang GRAVE  &kp CARET       &kp QUESTION       &kp AMPERSAND     &kp SQT                &kp DOUBLE_QUOTES     &kp PIPE
 &kp GRAVE      &kp EXCLAMATION  &kp AT             &kp HASH        &kp SEMICOLON  &kp PERCENT      &kp COLON       &kp RIGHT_BRACKET  &kp LEFT_BRACKET  &kp RIGHT_PARENTHESIS  &kp LEFT_PARENTHESIS  &trans
-&kp BACKSLASH  &kp KP_SLASH     &kp STAR           &kp MINUS       &kp EQUAL      &kp PLUS         &kp UNDERSCORE  &kp RIGHT_BRACE    &kp LEFT_BRACE    &kp GREATER_THAN       &kp LESS_THAN         &trans
+&kp BACKSLASH  &kp KP_SLASH     &kp STAR           &kp KP_MINUS    &kp EQUAL      &kp PLUS         &kp UNDERSCORE  &kp RIGHT_BRACE    &kp LEFT_BRACE    &kp GREATER_THAN       &kp LESS_THAN         &trans
                                                    &trans          &trans         &trans           &trans          &trans             &trans
             >;
         };
